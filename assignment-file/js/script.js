@@ -26,10 +26,7 @@ let xhr = new XMLHttpRequest;
 xhr.onload = function () {
     let data = JSON.parse(xhr.responseText);
     var news = data.data;
-    console.log(news[0].title)
-  
-
-    for (let i = 0; i < news.length; i++){
+    for (let i = 0; i < news.length; i++) {
         document.getElementById('cardLoop').innerHTML += ` <div class="col-12 col-md-4 col-style">
         <div class="card latest-card h-100 border-0">
           <img src="${news[i].thumbnail}" class="card-img" alt="...">
@@ -44,12 +41,7 @@ xhr.onload = function () {
           </div>
         </div>
       </div>`
-}
+    }
 }
 xhr.open('GET', '../data/company_intro.json')
 xhr.send();
-
-
-
-
-
