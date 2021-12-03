@@ -1,0 +1,17 @@
+.blog-img{
+    width: 100%;
+    height:700px;
+    background-image:url(/images/work-cube.jfif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 30px;
+}
+.blog-align{
+    width: 40%;
+}
+@media ( max-width: 756px){
+   .blog-align{
+       width: 100%;
+   }
+}

@@ -1,0 +1,171 @@
+/* about us start */
+
+.clients{
+    margin-top: 100px;
+    
+}
+.ttle-about1 h2{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 70px;
+}
+.ttle-about1 p{
+    width: 85%;
+    line-height: 30px;
+}
+.ttle-about1 button{
+    padding: 15px 30px;
+    color: white;
+    background-color: #f58a07;
+    border: none;
+}
+
+/* article2 */
+.strategy{
+    margin-top: 100px;
+}
+.ttle-about3{
+    padding-left: 50px;
+}
+.ttle-about3 ul li{
+    color: grey;
+    padding-bottom: 10px;
+}
+.ttle-about3 ul{
+    padding-left: 20px;
+    
+}
+.ttle-about3 h3{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.ttle-about3  p{
+    padding-bottom: 20px;
+}
+.img-to-content3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img-to-content3{
+    position: relative;
+    border-radius: 20px;
+    z-index: 2;
+}
+.img-to-content3::after{
+    content: "";
+    background-color: #a35a01c7;
+    position: absolute;
+    width: 13%;
+    height: 20%;
+    top: 100px;
+    left: -30px;
+    border-radius: 20px;
+
+}
+
+/* digitialization */
+
+.Digitialization{
+    margin-top: 100px;
+}
+.ttle-about4 h2{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.ttle-about4 p{
+    width: 90%;
+    font-size: 18px;
+}
+.img-to-content4 {
+    position: relative;
+}
+.img-to-content4 img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.img-to-content4::after{
+    content: "";
+    background-color: #a35a01c7;
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    bottom: 150px;
+    right: -30px;
+    border-radius: 20px;
+}
+
+/* risk assessment */
+
+
+.assessment{
+    margin-top: 100px;
+}
+.img-to-content5 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 29px;
+}
+.ttle-about5{
+    padding-left: 50px;
+}
+.ttle-about5 ul li{
+    color: grey;
+    padding-bottom: 10px;
+}
+.ttle-about5 ul{
+    padding-left: 20px;
+    
+}
+.ttle-about5 h3{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.img-to-content5{
+    position: relative;
+    border-radius: 20px;
+    z-index: 2;
+}
+.img-to-content5::after{
+    content: "";
+    background-color: #a35a01c7;
+    position: absolute;
+    width: 13%;
+    height: 20%;
+    bottom: 150px;
+    left: -30px;
+    border-radius: 20px;
+
+}
+
+/* <!-- artificial intelligence --> */
+ 
+.artificial{
+    margin-top: 100px;
+}
+.ar-image{
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+}
+.img-to-content6{
+    justify-content: end;
+    position: relative;
+    border-radius: 20px;
+    z-index: 2;
+}
+.img-to-content6::after{
+    content: "";
+    background-color: #a35a01c7;
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    bottom: 150px;
+    right: -35px;
+    border-radius: 20px;
+
+}

@@ -1,0 +1,15 @@
+.clont-ttle-back{
+    background-color: #edf7ff;
+    border-radius: 20px;
+    padding: 80px;
+}
+.clone-h2 h2 a{
+    text-decoration: none;
+    color: black;
+}
+.clone-h2 a:hover{
+    color: orange;
+}
+.clone-submint textarea{
+    border-radius: 20px;
+}
