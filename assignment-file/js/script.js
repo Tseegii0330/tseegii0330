@@ -3,37 +3,48 @@
 // For your mind: object.classList.add('class') this method is add class on selected element
 // e.target.scrollingElement.scrollTop use that method when track scrolling amount
 
+let nav = document.getElementById("navigation");
+let header = document.getElementsByClassName("main")[0];
+
+function scrollDetect(event) {
+    let addingEvent = event.target.scrollingElement.scrollTop;
+    let high = nav.offsetHeight + header.offsetHeight
+    if (addingEvent > high) {
+        nav.classList.add('fixed-top')
+    } else {
+        nav.classList.remove('fixed-top')
+    }
+}
+
+window.addEventListener('scroll', scrollDetect)
 
 
-// Add scrollDetect callback function on window.addEventlistener('scroll', callback) Listener
+// adding to даалгавар 2 
 
+let xhr = new XMLHttpRequest;
 
-// Define Play button variable
+xhr.onload = function () {
+    let data = JSON.parse(xhr.responseText);
+    var news = data.data;
+    console.log(news[0].title)
+  
 
-
-
-// Create a modal with a single line of JavaScript: https://getbootstrap.com/docs/5.1/components/modal/#via-javascript
-// Define finsetModal then use Bootstrap modal Object request
-
-
-// Create Click Event Listener on Play button variable (you already created above)
-// add finsetModal.show() on callback function
-// Select '.modal-body' class from finsetModal variable then use innerHTML method and add Youtube embed code
-
-
-
-// Create an XMLHttpRequest object
-// Create a callback function
-// Open a GET request and use data from ../data/company_intro.json
-// Send the request
-
-
-
-/*  Add subscription email action. When subscription POST request is successful, 
-    change the email element and subscribe button into "Your subscription is successful" Text. 
-    POST request should be done by AJAX request. We need a POST request end point for subscription email. 
-*/
-// Define Subscribe by ID name
-
-// Add CLICK Event Listener on the button
-// Then using Fetch method POST input value to http://52.221.191.153/subscribe/subscription/create 
+    for (let i = 0; i < news.length; i++){
+        document.getElementById('cardLoop').innerHTML += ` <div class="col-12 col-md-4 col-style">
+        <div class="card latest-card h-100 border-0">
+          <img src="${news[i].thumbnail}" class="card-img" alt="...">
+          <div class="card-body latest-title d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title">${news[i].title}</h5>
+              <p class="card-text">${news[i].content.slice(0 , 100)}</p>
+            </div>
+            <div class="learnmore">
+              <a href="blog.html" class="">Learn more&#x2192;</a>
+            </div>
+          </div>
+        </div>
+      </div>`
+}
+}
+xhr.open('GET', '../data/company_intro.json')
+xhr.send()
