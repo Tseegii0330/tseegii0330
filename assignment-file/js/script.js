@@ -3,8 +3,8 @@
 // For your mind: object.classList.add('class') this method is add class on selected element
 // e.target.scrollingElement.scrollTop use that method when track scrolling amount
 
-let nav = document.getElementById("navigation");
-let header = document.getElementsByClassName("main")[0];
+let nav = document.getElementsByClassName("navbar")[0];
+let header = document.getElementById('mainCont');
 
 function scrollDetect(event) {
     let addingEvent = event.target.scrollingElement.scrollTop;
@@ -47,4 +47,9 @@ xhr.onload = function () {
 }
 }
 xhr.open('GET', '../data/company_intro.json')
-xhr.send()
+xhr.send();
+
+
+
+
+
