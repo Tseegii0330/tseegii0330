@@ -19,7 +19,9 @@ p {
 .btn a {
     color: #f58a07;
 }
-
+.scroll{
+    scrollbar-width: 100px;
+}
 /* main heseg */
 .main {
     background-color: #edf7ff;

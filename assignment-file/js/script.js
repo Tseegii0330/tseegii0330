@@ -10,9 +10,9 @@ function scrollDetect(event) {
     let addingEvent = event.target.scrollingElement.scrollTop;
     let high = nav.offsetHeight + header.offsetHeight
     if (addingEvent > high) {
-        nav.classList.add('fixed-top')
+        nav.classList.add('fixed-top', 'scroll')
     } else {
-        nav.classList.remove('fixed-top')
+        nav.classList.remove('fixed-top', 'scroll')
     }
 }
 
