@@ -10,22 +10,22 @@ function scrollDetect(event) {
     let addingEvent = event.target.scrollingElement.scrollTop;
     let high = nav.offsetHeight + header.offsetHeight
     if (addingEvent > high) {
-        nav.classList.add('fixed-top', 'scroll')
+        nav.classList.add('fixed-top')
     } else {
-        nav.classList.remove('fixed-top', 'scroll')
+        nav.classList.remove('fixed-top')
     }
 }
 
 window.addEventListener('scroll', scrollDetect)
 
 
-// adding to даалгавар 2 
+//даалгавар 2 
 
 let xhr = new XMLHttpRequest;
 
 xhr.onload = function () {
     let data = JSON.parse(xhr.responseText);
-    var news = data.data;
+    let news = data.data;
     for (let i = 0; i < news.length; i++) {
         document.getElementById('cardLoop').innerHTML += ` <div class="col-12 col-md-4 col-style">
         <div class="card latest-card h-100 border-0">
@@ -33,10 +33,52 @@ xhr.onload = function () {
           <div class="card-body latest-title d-flex flex-column justify-content-between">
             <div>
               <h5 class="card-title">${news[i].title}</h5>
-              <p class="card-text">${news[i].content.slice(0 , 100)}</p>
+              <p class="card-text">${news[i].content.slice(0, 100)}</p>
             </div>
             <div class="learnmore">
               <a href="blog.html" class="">Learn more&#x2192;</a>
+            </div>
+          </div>
+        </div>
+      </div>`
+    }
+};
+xhr.open('GET', '../data/company_intro.json')
+xhr.send();
+
+
+
+//даалгавар 3
+
+
+var finsetModal = document.getElementById('modalInput')
+var modalBody = document.getElementById('modal-body')
+
+modalBody.addEventListener('click', function () {
+  console.log(clik)
+  finsetModal.focus()
+})
+
+
+//даалгавар 4
+
+let newsLoop = new XMLHttpRequest;
+
+newsLoop.onload = function () {
+    let jsonData = JSON.parse(xhr.responseText);
+    let latestVlog = jsonData.data;
+    console.log(latestVlog)
+    for (let i = 0; i < latestVlog.length; i++) {
+        document.getElementsByClassName('posts')[0].innerHTML += ` <div class="col-12 col-md-4 col-style">
+        <div class="card latest-card h-100 border-0">
+          <img src="${latestVlog[i].thumbnail}" class="card-img-top" alt="...">
+          <div class="card-body latest-title d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title">${latestVlog[i].title}</h5>
+              <p class="card-text">${latestVlog[i].content}</p>
+            </div>
+            <div class="learnmore">
+              <a href="#" class="">Learn more&#x2192;</a>
             </div>
           </div>
         </div>
