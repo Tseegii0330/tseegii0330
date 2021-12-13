@@ -85,5 +85,5 @@ newsLoop.onload = function () {
       </div>`
     }
 }
-xhr.open('GET', '../data/company_intro.json')
+xhr.open('GET', '../data/posts.json')
 xhr.send();
