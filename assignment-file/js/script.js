@@ -51,13 +51,18 @@ xhr.send();
 //даалгавар 3
 
 
-var finsetModal = document.getElementById('modalInput')
-var modalBody = document.getElementById('modal-body')
-
-modalBody.addEventListener('click', function () {
-  console.log(clik)
-  finsetModal.focus()
+const finsetModal = new bootstrap.Modal(document.getElementById('modalShow'), {
+  backdrop: true,
+  keyboard: false
 })
+console.log(finsetModal)
+
+document.getElementById('modalInput').addEventListener('click', ()=>{
+finsetModal.show()
+})
+document.getElementById('modal-body').innerHTML= `<iframe width="560" height="315" src="https://www.youtube.com/embed/XXYlFuWEuKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
+
 
 
 //даалгавар 4
@@ -69,13 +74,13 @@ newsLoop.onload = function () {
     let latestVlog = jsonData.data;
     console.log(latestVlog)
     for (let i = 0; i < latestVlog.length; i++) {
-        document.getElementsByClassName('posts')[0].innerHTML += ` <div class="col-12 col-md-4 col-style">
+        document.getElementById('newsLoop').innerHTML += ` <div class="col-12 col-md-4 col-style">
         <div class="card latest-card h-100 border-0">
           <img src="${latestVlog[i].thumbnail}" class="card-img-top" alt="...">
           <div class="card-body latest-title d-flex flex-column justify-content-between">
             <div>
               <h5 class="card-title">${latestVlog[i].title}</h5>
-              <p class="card-text">${latestVlog[i].content}</p>
+              <p class="card-text">${latestVlog[i].content.slice(0, 100)}</p>
             </div>
             <div class="learnmore">
               <a href="#" class="">Learn more&#x2192;</a>
@@ -85,5 +90,7 @@ newsLoop.onload = function () {
       </div>`
     }
 }
-xhr.open('GET', '../data/posts.json')
-xhr.send();
+newsLoop.open('GET', '../data/posts.json')
+newsLoop.send();
+
+

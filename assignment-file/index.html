@@ -284,15 +284,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-12 imagesVideo">
+        <div class="col-md-6 col-12 imagesVideo" id="inputVideo">
           <img src="/images/video-image.png" alt="">
           <button type="submit" class="play-bttn" id="modalInput"></button>
-          <div id="modal-body">
-          </div>
         </div>
       </div>
     </div>
   </article>
+  
+
 
   <!-- latast vlog and news -->
 
@@ -302,7 +302,7 @@
       <div class="latest-title">
         <h2 class="fw-bold">Latest Vlog & News</h2>
       </div>
-      <div class="posts row row-style align-items-stretch pb-5" id="newsLoop">
+      <div class="posts2 row row-style align-items-stretch pb-5" id="newsLoop">
         <!-- <div class="col-12 col-md-4 col-style">
           <div class="card latest-card h-100 border-0">
             <img src="/images/post1.png" class="card-img-top" alt="...">
@@ -354,6 +354,8 @@
     </div>
   </section>
 
+
+
   <!-- footer -->
 
 
@@ -402,10 +404,31 @@
     </div>
   </footer>
 
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <script src="/js/script.js"></script>
-
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
   </script>
